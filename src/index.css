@@ -11,4 +11,13 @@
   .background {
     @apply bg-center bg-no-repeat bg-cover fixed h-screen w-screen -z-10;
   }
+
+  .icon {
+    @apply text-[24pt] text-[#c1c9d9] hover:text-white hover:cursor-pointer mx-4;
+  }
+
+  .profile-icon {
+    @apply h-[50px] w-[50px] bg-profilePic bg-cover rounded-3xl ml-4 mr-8 border-[2px] 
+    border-[#c1c9d9] hover:border-white hover:cursor-pointer;
+  }
 }
