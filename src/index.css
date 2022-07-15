@@ -4,5 +4,11 @@
 
 
 @layer components {
-  
+  .contentContainer {
+    @apply min-h-screen overflow-auto;
+  }
+
+  .background {
+    @apply bg-center bg-no-repeat bg-cover fixed h-screen w-screen -z-10;
+  }
 }
