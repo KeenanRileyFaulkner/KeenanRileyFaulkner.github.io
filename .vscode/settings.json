@@ -1,0 +1,5 @@
+{
+    "css.lint.unknownAtRules": "ignore"
+}
+
+//this ignores tailwind related probles in the index.css file
