@@ -9,6 +9,12 @@ module.exports = {
         "profilePic": "url('/src/images/Profile Pic 2022.jpg')",
       }
     },
+
+    screens: {
+      'sm': '400px',
+      'xl': '1603px',
+      '2xl': '1674px',
+    }
   },
   plugins: [],
 }

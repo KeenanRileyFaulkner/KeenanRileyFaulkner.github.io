@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div>
-      <div className='bg-[#0d1117] background' />
+      <div className='bg-[#0d1117] background bg-cover' />
       <Header updatePageArr={updatePageArr} currPage={currPage} />
       {display}
     </div>
