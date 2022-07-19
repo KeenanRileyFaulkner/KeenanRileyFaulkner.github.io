@@ -55,4 +55,8 @@
   .menu-toggle-btn {
     @apply md:scale-0 scale-100 md:mr-0 mr-10 md:w-0 w-auto;
   }
+
+  .dropdown-btn {
+    @apply hover:text-white w-[200px] h-[85px] text-left pl-[20px]
+  }
 }
