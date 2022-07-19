@@ -104,11 +104,12 @@ const HamburgerMenu = () => {
     let icon;
     let description;
     if (expanded) {
-        icon = <HamburgerMenuIcon onClick={toggleExpanded} />;
-        description = 'Menu';
-    } else {
         icon = <CloseIcon onClick={toggleExpanded} />;
         description = 'Close Menu';
+    } else {
+        icon = <HamburgerMenuIcon onClick={toggleExpanded} />;
+        description = 'Menu';
+        
     }
 
     return (
