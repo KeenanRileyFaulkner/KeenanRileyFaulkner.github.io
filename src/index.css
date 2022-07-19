@@ -40,12 +40,12 @@
     @apply tooltip mt-5 mr-0 -ml-2 icon;
   }
 
-  .nav-menu-tooltip {
-    @apply tooltip mt-5 -ml-3 icon;
-  }
-
   .nav-menu-close-tooltip {
     @apply tooltip mt-5 -ml-8 icon;
+  }
+
+  .nav-menu-open-tooltip {
+    @apply tooltip mt-5 -ml-3 icon;
   }
 
   .right-side-nav-icons {
