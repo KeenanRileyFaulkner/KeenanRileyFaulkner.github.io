@@ -17,7 +17,38 @@
   }
 
   .profile-icon {
-    @apply h-[50px] w-[50px] bg-profilePic bg-cover rounded-3xl ml-4 mr-8 border-[2px] 
+    @apply h-[50px] w-[50px] bg-profilePic bg-cover rounded-3xl ml-4 md:mr-8 border-[2px] 
     border-[#c1c9d9] hover:border-white hover:cursor-pointer;
+  }
+
+  .nav-icon {
+    @apply font-semibold text-[#c1c9d9] text-[24pt] pl-8 hover:text-white hover:cursor-pointer
+  }
+
+  .tooltip {
+    @apply absolute w-auto p-2 min-w-max
+           rounded-md shadow-md 
+           text-white bg-black
+           text-xs font-bold transition-all duration-100 scale-0 origin-top
+  }
+
+  .nav-name-tooltip {
+    @apply tooltip m-3 md:left-20 ml-5;
+  }
+
+  .nav-icon-tooltip {
+    @apply tooltip mt-5 mr-0 -ml-2 icon;
+  }
+
+  .nav-menu-tooltip {
+    @apply tooltip mt-5 -ml-8 icon
+  }
+
+  .right-side-nav-icons {
+    @apply md:scale-100 scale-0 w-0 md:w-auto;
+  }
+
+  .menu-toggle-btn {
+    @apply md:scale-0 scale-100 md:mr-0 mr-10 md:w-0 w-auto;
   }
 }
