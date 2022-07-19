@@ -41,7 +41,11 @@
   }
 
   .nav-menu-tooltip {
-    @apply tooltip mt-5 -ml-8 icon
+    @apply tooltip mt-5 -ml-3 icon;
+  }
+
+  .nav-menu-close-tooltip {
+    @apply tooltip mt-5 -ml-8 icon;
   }
 
   .right-side-nav-icons {

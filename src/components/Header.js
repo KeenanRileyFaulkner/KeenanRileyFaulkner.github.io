@@ -1,7 +1,7 @@
 import {RiStackFill as SkillsIcon, RiContactsBook2Fill as ContactIcon, RiMenuFill as HamburgerMenuIcon} from 'react-icons/ri'
 import {BsGrid as ProjectIcon} from 'react-icons/bs'
 import { IoClose as CloseIcon } from 'react-icons/io5'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Header = ({ updatePageArr, currPage }) => {
     const handleNameClick = () => {
@@ -79,12 +79,15 @@ const IconTooltip = ({ icon, text }) => {
     )
 }
 
-const HamburgerMenuToolTip = ({ icon, text }) => {
+const HamburgerMenuToolTip = ({ icon, text, expanded }) => {
+    let expandedClass;
+    expanded ? expandedClass='nav-menu-tooltip' : expandedClass = 'nav-menu-close-tooltip';
+
     return(
         <div className='nav-icon group'>
             {icon}
 
-            <span className='nav-menu-tooltip group-hover:scale-100'>
+            <span className={`${expandedClass} group-hover:scale-100`}>
                 {text}
             </span>
         </div>
@@ -110,7 +113,7 @@ const HamburgerMenu = () => {
 
     return (
         <div className='menu-toggle-btn'>
-            <HamburgerMenuToolTip icon={icon} text={description} />
+            <HamburgerMenuToolTip icon={icon} text={description} expanded={expanded} />
         </div>
     )
 }
