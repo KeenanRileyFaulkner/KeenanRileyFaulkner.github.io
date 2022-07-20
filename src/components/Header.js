@@ -33,7 +33,7 @@ const Header = ({ updatePageArr, currPage }) => {
     }
 
     return (
-        <div className="w-screen h-[100px] border-b-[1px] border-[#808691] fixed flex flex-row items-center bg-[#0d1117]">
+        <div className="header-container">
             <NameTooltip  name={<h1 onClick={handleNameClick}>Keenan Faulkner</h1>} text={'About Page'} />
 
             <div className='flex flex-row items-center ml-auto right-side-nav-icons'>
@@ -151,7 +151,7 @@ const MenuDropdown = ({ expanded, toggleExpanded, pageUpdateFunctions }) => {
     }
 
     return (
-        <div className={`h-[350px] w-[230px] md:w-0 absolute mt-[33px] -ml-[125px] flex flex-row flex-wrap items-center ${scale} border-[1px] border-white bg-[#0d1117] text-[#c1c9d9] -z-10`}>
+        <div className={`menu-dropdown-container ${scale}`}>
             <button className='dropdown-btn' onClick={navToSkills}>Skills -- 🔨</button>
             <hr className='text-white w-[230px]'/>
             <button className='dropdown-btn' onClick={navToProjects}>Projects -- 👷</button>

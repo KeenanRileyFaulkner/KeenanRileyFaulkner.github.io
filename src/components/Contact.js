@@ -1,5 +1,8 @@
+import { AiOutlineMail as EmailIcon, AiOutlineGithub as GithubIcon, AiOutlineLinkedin as LinkedinIcon } from 'react-icons/ai'
 import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 const {REACT_APP_PUBLIC_KEY, REACT_APP_TEMPLATE_ID, REACT_APP_SERVICE_ID} = process.env
+
 
 const Contact = () => {
 
@@ -13,6 +16,11 @@ const Contact = () => {
                 alert(`You must include a valid ${input.name} in your submission`);
             }
         });
+
+        if(document.querySelector('textarea').value === '') {
+            validInputs = false;
+            alert('You must include a valid message in your submission.');
+        }
 
         if(validInputs) {
             emailjs
@@ -28,24 +36,62 @@ const Contact = () => {
     }
 
     return (
-        <div className="pt-[100px] pb-10 flex flex-col justify-center items-center overflow-auto">
+        <div className="contact-container">
             <form className="email-form" onSubmit={handleSubmit}>
-                <h2 className="email-form-element text-[18pt] text-[#c1c9d9] pl-0 mt-3">Email Me</h2>
+                <h2 className="emailme-header">Email Me</h2>
                 <input placeholder="Name" className="email-form-element mt-3" name="submitter_name" />
                 <input placeholder="Phone Number" className="email-form-element" name="phone" />
                 <input placeholder="Email" className="email-form-element" name="email" />
-                <input placeholder="Subject" className="email-form-element" name="Subject" />
+                <input placeholder="Subject" className="email-form-element" name="subject" />
                 <textarea placeholder="Message" className="email-form-element pt-4 h-[150px]" name="message" />
                 <button className="email-submit-btn" type="submit">Submit</button>
             </form>
-            <section className='min-w-[300px] flex flex-col justify-center items-center mt-16 text-[#c1c9d9]'>
-                <h1 className='w-[100%] ml-8 px-6 md:text-center md:mr-8 font-bold'>Keenan R. Faulkner</h1>
-                <div className='mt-2 flex flex-wrap px-4'>
-                    <span className='ml-6 pr-4'>Email:{" "}<span className='font-semibold'>keenan.r.faulkner@gmail.com</span></span>
-                    <span className='ml-6 pr-4'>GitHub:{" "}<span className='font-semibold'>https://github.com/KeenanRileyFaulkner</span></span>
-                    <span className='ml-6 pr-4'>LinkedIn:{" "}<span className='font-semibold'>www.linkedin.com/in/keenan-faulkner</span></span>
-                </div>
-            </section>
+            <Footer />
+        </div>
+    )
+}
+
+const Footer = () => {
+    return (
+        <section className='footer-container'>
+            <div className='footer-icons'>
+                <FooterIconWithTooltip icon={<EmailIcon />} hovertext='keenan.r.faulkner@gmail.com' />
+                <FooterIconWithTooltip icon={<GithubIcon />} hovertext='https://github.com/KeenanRileyFaulkner' />
+                <FooterIconWithTooltip icon={<LinkedinIcon />} hovertext='www.linkedin.com/in/keenan-faulkner' />
+            </div>
+            <h1 className='footer-name-header'>Keenan R. Faulkner</h1>
+            <div className='footer-desktop-links'>
+                <span className='px-6 w-auto text-center'>GitHub:{" "}<span className='font-semibold'>https://github.com/KeenanRileyFaulkner</span></span>
+                <span className='px-6 w-auto text-center'>LinkedIn:{" "}<span className='font-semibold'>www.linkedin.com/in/keenan-faulkner</span></span>
+                <span className='px-6 w-auto text-center'>Email:{" "}<span className='font-semibold'>keenan.r.faulkner@gmail.com</span></span>
+            </div>
+        </section>
+    )
+}
+
+const FooterIconWithTooltip = ({ icon, hovertext, clicktext='Copied to Clipboard!' }) => {
+    const [styles, setStyles] = useState('hover-styles');
+    const [text, setText] = useState(`${hovertext}`);
+
+    const handleClick = () => {
+        navigator.clipboard.writeText(text);
+
+        setText(`${clicktext}`);
+        setStyles('click-styles');
+
+        setTimeout(() => {
+            setText(`${hovertext}`);
+            setStyles('hover-styles');
+        }, 3000);
+    }
+    
+    return (
+        <div onClick={handleClick} className='px-6 nav-icon w-[40px] m-0 group'>
+            {icon}
+
+            <span className={`${styles} group-hover:scale-100`}>
+                {text}
+            </span>
         </div>
     )
 }

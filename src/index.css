@@ -12,6 +12,10 @@
     @apply bg-center bg-no-repeat bg-cover fixed h-screen w-screen -z-10;
   }
 
+  .header-container {
+    @apply w-screen h-[100px] border-b-[1px] border-[#808691] fixed flex flex-row items-center bg-[#0d1117];
+  }
+
   .icon {
     @apply text-[24pt] text-[#c1c9d9] hover:text-white hover:cursor-pointer mx-4;
   }
@@ -22,14 +26,14 @@
   }
 
   .nav-icon {
-    @apply font-semibold text-[#c1c9d9] text-[24pt] pl-8 hover:text-white hover:cursor-pointer
+    @apply font-semibold text-[#c1c9d9] text-[24pt] pl-8 hover:text-white hover:cursor-pointer;
   }
 
   .tooltip {
     @apply absolute w-auto p-2 min-w-max
            rounded-md shadow-md 
            text-white bg-black
-           text-xs font-bold transition-all duration-100 scale-0 origin-top
+           text-xs font-bold transition-all duration-100 scale-0 origin-top;
   }
 
   .nav-name-tooltip {
@@ -42,6 +46,12 @@
 
   .nav-menu-close-tooltip {
     @apply tooltip mt-5 -ml-8 icon;
+  }
+
+  .menu-dropdown-container {
+    @apply h-[350px] w-[230px] md:w-0 absolute mt-[33px] -ml-[125px] 
+           flex flex-row flex-wrap items-center
+           border-[1px] border-white bg-[#0d1117] text-[#c1c9d9] -z-10;
   }
 
   .nav-menu-open-tooltip {
@@ -60,6 +70,10 @@
     @apply hover:text-white w-[200px] h-[85px] text-left pl-[20px]
   }
 
+  .contact-container {
+    @apply pt-[100px] flex flex-col justify-center items-center overflow-auto;
+  }
+
   .email-form {
     @apply flex flex-wrap justify-center sm:w-[50%] sm:min-w-[400px] min-w-[300px] w-[70%] border-[1px] border-white p-3
            mb-auto mt-16 rounded-xl;
@@ -69,9 +83,47 @@
     @apply w-[95%] h-[40px] mb-3 pl-4 font-medium rounded-lg;
   }
 
+  .emailme-header {
+    @apply email-form-element text-[18pt] text-[#c1c9d9] pl-0 mt-3;
+  }
+
   .email-submit-btn {
     @apply email-form-element my-4 bg-[#040507] w-20 pl-0 
          text-[#c1c9d9] rounded-xl border-[1px] border-[#c1c9d9] 
          ml-3 hover:border-white hover:text-white;
+  }
+
+  .footer-container {
+    @apply w-[100%] min-h-[114px] 
+           flex flex-col justify-center items-center 
+           mt-20 py-5 lg:py-2 
+           border-t-[1px] border-[#c1c9d9] text-[#c1c9d9] bg-[#0d1117];
+  }
+
+  .footer-icons {
+    @apply scale-100 lg:scale-0 w-[100%] lg:h-0 h-[30px] mt-2 flex flex-row;
+  }
+
+  .footer-tooltip-styles {
+    @apply w-auto h-9 absolute p-2 min-w-max rounded-md shadow-md 
+           bottom-10
+         text-[#c1c9d9] border-[1px] border-[#c1c9d9]
+           text-xs font-bold transition-all duration-100 scale-0 origin-bottom;
+  }
+
+  .hover-styles {
+    @apply bg-black footer-tooltip-styles;
+  }
+
+  .click-styles {
+    @apply bg-green-700 text-white footer-tooltip-styles;
+  }
+
+  .footer-name-header {
+    @apply w-[100%] px-6 lg:text-center font-bold mt-[10px] lg:mt-0;
+  }
+
+  .footer-desktop-links {
+    @apply lg:my-2 flex flex-wrap justify-center w-[100%] lg:scale-100 scale-0 h-0 lg:h-auto;
   }
 }
