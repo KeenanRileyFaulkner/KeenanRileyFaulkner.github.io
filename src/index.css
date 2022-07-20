@@ -59,4 +59,19 @@
   .dropdown-btn {
     @apply hover:text-white w-[200px] h-[85px] text-left pl-[20px]
   }
+
+  .email-form {
+    @apply flex flex-wrap justify-center sm:w-[50%] sm:min-w-[400px] min-w-[300px] w-[70%] border-[1px] border-white p-3
+           mb-auto mt-16 rounded-xl;
+  }
+
+  .email-form-element {
+    @apply w-[95%] h-[40px] mb-3 pl-4 font-medium rounded-lg;
+  }
+
+  .email-submit-btn {
+    @apply email-form-element my-4 bg-[#040507] w-20 pl-0 
+         text-[#c1c9d9] rounded-xl border-[1px] border-[#c1c9d9] 
+         ml-3 hover:border-white hover:text-white;
+  }
 }

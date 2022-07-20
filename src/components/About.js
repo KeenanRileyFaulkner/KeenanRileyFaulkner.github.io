@@ -2,17 +2,18 @@ import aboutPic from '../images/About Pic.JPG';
 
 const About = () => {
     return (
-        <div className="text-[#c1c9d9] min-h-screen pt-[100px] overflow-x-hidden">
+        <div className="text-[#c1c9d9] pt-[100px] overflow-x-hidden">
             <section className="p-10 pl-12 mt-[20px] w-screen flex flex-row flex-wrap justify-center 2xl:pt-[65px]">
                 <div className='min-w-[300px] max-w-[1000px] flex flex-col justify-center'>
                     <h2 className="text-[#c1c9d9] font-medium text-[18pt]">About Me</h2>
                     <p className="text-[#c1c9d9] text-[12pt] mt-[20px] xl:pr-[100px] pb-[60px]">
                         I began learning how to write code in 2018. 
-                        Since then I've served a mission for The Church of Jesus Christ of Latter-Day Saints in both Sydney Australia 
-                        and Las Vegas Nevada, and I now attend BYU in Provo, UT. I'm a computer engineering major, scheduled to graduate 
-                        in the spring of 2025. I love to learn, and it's one of the things that adds to my abilities as a developer. 
-                        In high school, I finished all my general education classes and graduated with an Associate's Degree. 
-                        I was named the Provo High School Mathematics Sterling Scholar, graduated with a 4.0 GPA, and earned a 35/36 on the ACT.
+                        Since then I've served a mission for The Church of Jesus Christ of Latter-Day Saints, for two years, 
+                        in both Sydney Australia and Las Vegas Nevada, and I now attend BYU in Provo, UT. I'm a computer engineering 
+                        major, scheduled to graduate in the spring of 2025. I love to learn, and it's one of the things that adds to 
+                        my abilities as a developer. In high school, I finished all my general education classes and graduated with 
+                        an Associate's Degree. I was named the Provo High School Mathematics Sterling Scholar, graduated with a 4.0 GPA, 
+                        was the salutatorian, and earned a 35/36 on the ACT.
                         <br />
                         <br />
                         I have many other hobbies outside of software development. I enjoy being active by hiking with my wife, Nikki, and 
