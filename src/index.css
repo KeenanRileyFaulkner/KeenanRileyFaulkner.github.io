@@ -49,9 +49,13 @@
   }
 
   .menu-dropdown-container {
-    @apply h-[350px] w-[230px] md:w-0 absolute mt-[33px] -ml-[125px] 
+    @apply h-[350px] w-[230px] md:w-0 absolute mt-[34px] -ml-[125px] 
            flex flex-row flex-wrap items-center
-           border-[1px] border-white bg-[#0d1117] text-[#c1c9d9] -z-10;
+           border-[1px] border-[#808691] border-b-white border-l-white border-t-0 bg-[#0d1117] text-[#c1c9d9] -z-10;
+  }
+
+  .dropdown-hr {
+    @apply text-[#6d727b] w-[230px];
   }
 
   .nav-menu-open-tooltip {

@@ -151,13 +151,13 @@ const MenuDropdown = ({ expanded, toggleExpanded, pageUpdateFunctions }) => {
     }
 
     return (
-        <div className={`menu-dropdown-container ${scale}`}>
+        <div className={`menu-dropdown-container ${scale} transition-all duration-200 origin-top-right`}>
             <button className='dropdown-btn' onClick={navToSkills}>Skills -- 🔨</button>
-            <hr className='text-white w-[230px]'/>
+            <hr className='dropdown-hr'/>
             <button className='dropdown-btn' onClick={navToProjects}>Projects -- 👷</button>
-            <hr className='text-white w-[230px]'/>
+            <hr className='dropdown-hr'/>
             <button className='dropdown-btn' onClick={navToContact}>Contact -- 📨</button>
-            <hr className='text-white w-[230px]'/>
+            <hr className='dropdown-hr'/>
             <button className='dropdown-btn' onClick={navToGithub}>Github Profile -- 🖥️</button>
         </div>
     )
