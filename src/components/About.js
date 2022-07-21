@@ -3,7 +3,7 @@ import aboutPic from '../images/About Pic.JPG';
 const About = () => {
     return (
         <div className="text-[#c1c9d9] pt-[100px] overflow-x-hidden">
-            <section className="p-10 pl-12 mt-[20px] w-screen flex flex-row flex-wrap justify-center 2xl:pt-[65px]">
+            <section className="p-10 pl-12 w-screen flex flex-row flex-wrap justify-center">
                 <div className='min-w-[300px] max-w-[1000px] flex flex-col justify-center'>
                     <h2 className="text-[#c1c9d9] font-medium text-[18pt]">About Me</h2>
                     <p className="text-[#c1c9d9] text-[12pt] mt-[20px] xl:pr-[100px] pb-[60px]">

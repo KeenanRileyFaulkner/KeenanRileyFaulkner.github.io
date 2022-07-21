@@ -46,7 +46,7 @@ const FooterLinkIcon = ({ icon, href, ml=true }) => {
 
 const FooterEmailIcon = () => {
     return (
-        <a href='mailto:keenan.r.faulkner@gmail.com' className='mx-2 hover:text-white'>
+        <a href='mailto:keenan.r.faulkner@gmail.com' className='mx-2 hover:text-white pb-2'>
             <EmailIcon size='35' />
         </a>
     )
