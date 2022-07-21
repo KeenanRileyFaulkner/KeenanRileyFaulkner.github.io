@@ -33,7 +33,7 @@ const About = () => {
                 <div className='xl:border-l-[1px] xl:border-t-0 border-t-[1px] sm:px-[60px] pborder-[#808691] xl:pl-[100px]' >
                     <img 
                         src={aboutPic}
-                        className="2xl:h-[650px] px-0 min-h-[400px] max-h-[650px] pt-[60px] xl:pb-[60px]"
+                        className="2xl:h-[630px] px-0 min-h-[400px] max-h-[650px] pt-[60px] xl:pb-[60px]"
                         alt="Me and my wife"
                     />
                 </div>
