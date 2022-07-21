@@ -25,7 +25,7 @@ const Contact = () => {
             emailjs
             .sendForm(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, e.target, REACT_APP_PUBLIC_KEY)
             .then((result) => {
-                alert('Message sent! I will get back to you shortly', result.text);
+                alert('Message sent! I will get back to you shortly.', result.text);
                 document.querySelectorAll('input').forEach((input) => input.value = '');
             },
                 (error) => {
