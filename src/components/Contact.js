@@ -1,5 +1,4 @@
 import emailjs from '@emailjs/browser';
-import { useState } from 'react';
 const {REACT_APP_PUBLIC_KEY, REACT_APP_TEMPLATE_ID, REACT_APP_SERVICE_ID} = process.env
 
 
