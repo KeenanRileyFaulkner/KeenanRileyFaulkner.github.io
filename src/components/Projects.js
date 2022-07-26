@@ -11,8 +11,10 @@ import {
     SiJava as JavaIcon,
     SiReactrouter as ReactRouterIcon
 } from 'react-icons/si';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const Projects = () => {
+    useDocumentTitle('Projects -- Keenan Faulkner');
     return (
         <div className="mt-[100px] pt-[20px] flex justify-center items-center min-h-[710px]">
             <ProjectCard 

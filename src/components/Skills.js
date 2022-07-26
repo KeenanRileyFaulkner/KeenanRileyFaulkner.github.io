@@ -11,8 +11,10 @@ import {
     SiJava as JavaIcon,
     SiReactrouter as ReactRouterIcon
 } from 'react-icons/si';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const Skills = () => {
+    useDocumentTitle('Skills -- Keenan Faulkner')
     return (
         <div className="skills-container">
             <div className="skills-wrapper">

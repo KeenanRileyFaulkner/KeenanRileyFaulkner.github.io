@@ -1,6 +1,8 @@
 import aboutPic from '../images/About Pic.JPG';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const About = () => {
+    useDocumentTitle('About -- Keenan Faulkner');
     return (
         <div className="text-[#c1c9d9] pt-[100px] overflow-x-hidden">
             <section className="p-10 pl-12 w-screen flex flex-row flex-wrap justify-center">
