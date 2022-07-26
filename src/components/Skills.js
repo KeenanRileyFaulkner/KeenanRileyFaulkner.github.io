@@ -9,7 +9,8 @@ import {
     SiCplusplus as CppIcon,
     SiHtml5 as HTMLIcon,
     SiJava as JavaIcon,
-    SiReactrouter as ReactRouterIcon
+    SiReactrouter as ReactRouterIcon,
+    SiGit as GitIcon
 } from 'react-icons/si';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
@@ -29,6 +30,7 @@ const Skills = () => {
                 <SkillIcon icon={<TailwindIcon size='80' className='text-[#07adca] group-hover:text-[#53ccff]' />} tooltip='Tailwind CSS'/>
                 <SkillIcon icon={<CppIcon size='80' className='text-[#233f70] group-hover:text-[#3c64a7]' />} tooltip='C++'/>
                 <SkillIcon icon={<JavaIcon size='80' className='text-[#d0350d] group-hover:text-[#ff3300]' />} tooltip='Java'/>
+                <SkillIcon icon={<GitIcon size='80' className='text-[#e44c30] group-hover:text-[#fb6f56]' />} tooltip='Git' />
             </div>
         </div>
     )
