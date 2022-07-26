@@ -2,44 +2,25 @@ import {RiStackFill as SkillsIcon, RiContactsBook2Fill as ContactIcon, RiMenuFil
 import {BsGrid as ProjectIcon} from 'react-icons/bs'
 import { IoClose as CloseIcon } from 'react-icons/io5'
 import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
-const Header = ({ updatePageArr, currPage }) => {
-    const handleNameClick = () => {
-        if(currPage.about === false) {
-            const cb = updatePageArr[0];
-            cb();
-        }
-    }
-
-    const handleSkillsIconClick = () => {
-        if(currPage.skills === false) {
-            const cb = updatePageArr[1];
-            cb();
-        }
-    }
-
-    const handleProjectIconClick = () => {
-        if(currPage.projects === false) {
-            const cb = updatePageArr[2];
-            cb();
-        }
-    }
-
-    const handleContactIconClick = () => {
-        if(currPage.contact === false) {
-            const cb = updatePageArr[3];
-            cb();
-        }
-    }
-
+const Header = () => {
     return (
         <div className="header-container">
-            <NameTooltip  name={<h1 onClick={handleNameClick}>Keenan Faulkner</h1>} text={'About Page'} />
+            <Link to='/about'>
+                <NameTooltip  name={<h1>Keenan Faulkner</h1>} text={'About Page'} />
+            </Link>
 
             <div className='flex flex-row items-center ml-auto right-side-nav-icons'>
-                <IconTooltip icon={<SkillsIcon onClick={handleSkillsIconClick} />} text="Skills" />
-                <IconTooltip icon={<ProjectIcon onClick={handleProjectIconClick} />} text="Projects" />
-                <IconTooltip icon={<ContactIcon onClick={handleContactIconClick} />} text="Contact" />
+                <Link to='/skills'>
+                    <IconTooltip icon={<SkillsIcon/>} text="Skills" />
+                </Link>
+                <Link to='/projects'>
+                    <IconTooltip icon={<ProjectIcon/>} text="Projects" />
+                </Link>
+                <Link to='/contact'>
+                    <IconTooltip icon={<ContactIcon/>} text="Contact" />
+                </Link>
                 
                 <IconTooltip 
                     icon={ 
@@ -50,7 +31,7 @@ const Header = ({ updatePageArr, currPage }) => {
                     text="Github Profile"
                 />
             </div>
-            <HamburgerMenu forwardPageUpdates={[handleSkillsIconClick, handleProjectIconClick, handleContactIconClick]} />
+            <HamburgerMenu />
         </div>
     )
 }
@@ -79,22 +60,7 @@ const IconTooltip = ({ icon, text }) => {
     )
 }
 
-const HamburgerMenuToolTip = ({ icon, text, expanded }) => {
-    let expandedClass;
-    expanded ? expandedClass='nav-menu-close-tooltip' : expandedClass = 'nav-menu-open-tooltip';
-
-    return(
-        <div className='nav-icon group'>
-            {icon}
-
-            <span className={`${expandedClass} group-hover:scale-100`}>
-                {text}
-            </span>
-        </div>
-    );
-}
-
-const HamburgerMenu = ({ forwardPageUpdates }) => {
+const HamburgerMenu = () => {
     const [expanded, setExpanded] = useState(false);
     const toggleExpanded = () => {
         setExpanded(!expanded);
@@ -113,12 +79,27 @@ const HamburgerMenu = ({ forwardPageUpdates }) => {
     return (
         <div className='menu-toggle-btn'>
             <HamburgerMenuToolTip icon={icon} text={description} expanded={expanded} />
-            <MenuDropdown expanded={expanded} toggleExpanded={toggleExpanded} pageUpdateFunctions={forwardPageUpdates} />
+            <MenuDropdown expanded={expanded} toggleExpanded={toggleExpanded} />
         </div>
     )
 }
 
-const MenuDropdown = ({ expanded, toggleExpanded, pageUpdateFunctions }) => {
+const HamburgerMenuToolTip = ({ icon, text, expanded }) => {
+    let expandedClass;
+    expanded ? expandedClass='nav-menu-close-tooltip' : expandedClass = 'nav-menu-open-tooltip';
+
+    return(
+        <div className='nav-icon group'>
+            {icon}
+
+            <span className={`${expandedClass} group-hover:scale-100`}>
+                {text}
+            </span>
+        </div>
+    );
+}
+
+const MenuDropdown = ({ expanded, toggleExpanded }) => {
     let scale;
     if(expanded) {
         scale = 'scale-100'
@@ -126,18 +107,20 @@ const MenuDropdown = ({ expanded, toggleExpanded, pageUpdateFunctions }) => {
         scale = 'scale-0'
     }
 
+
+    let navigate = useNavigate();
     const navToSkills = () => {
-        pageUpdateFunctions[0]();
+        navigate('/skills');
         toggleExpanded();
     }
 
     const navToProjects = () => {
-        pageUpdateFunctions[1]();
+        navigate('/projects');
         toggleExpanded();
     }
     
     const navToContact = () => {
-        pageUpdateFunctions[2]();
+        navigate('/contact');
         toggleExpanded();
     }
 

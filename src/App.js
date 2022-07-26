@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import About from './components/About';
@@ -45,8 +46,15 @@ function App() {
   return (
     <div className='min-h-screen flex flex-col'>
       <div className='bg-[#0d1117] background bg-cover' />
-      <Header updatePageArr={updatePageArr} currPage={currPage} />
-      {display}
+      <Header />
+      <Routes>
+        <Route path='/' exact element={<Navigate to='about' replace={true} />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/skills' element={<Skills />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
+      {/* {display} */}
       <Footer />
     </div>
     

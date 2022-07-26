@@ -71,7 +71,7 @@
   }
 
   .dropdown-btn {
-    @apply hover:text-white w-[200px] h-[85px] text-left pl-[20px]
+    @apply hover:text-white w-[200px] h-[85px] text-left pl-[20px];
   }
 
   .contact-container {
