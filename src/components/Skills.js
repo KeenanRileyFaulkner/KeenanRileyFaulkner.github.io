@@ -1,6 +1,9 @@
+import { FaRoute as RoutingIcon } from "react-icons/fa";
+import { IoHardwareChip as RTLDesignIcon } from "react-icons/io5";
 import {
     SiJavascript as JSIcon, 
     SiCss3 as CSSIcon, 
+    SiGnubash as BashIcon,
     SiPostgresql as PostgresIcon, 
     SiNodedotjs as NodeIcon, 
     SiExpress as ExpressIcon,
@@ -10,8 +13,10 @@ import {
     SiHtml5 as HTMLIcon,
     SiJava as JavaIcon,
     SiReactrouter as ReactRouterIcon,
-    SiGit as GitIcon
+    SiGit as GitIcon,
+    SiPython as PythonIcon
 } from 'react-icons/si';
+import { VscTerminalLinux as LinuxIcon  } from "react-icons/vsc";
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const Skills = () => {
@@ -19,6 +24,14 @@ const Skills = () => {
     return (
         <div className="skills-container">
             <div className="skills-wrapper">
+                <SkillIcon icon={<PythonIcon size='80' className='text-[#c414c4] group-hover:text-[#ff00ff]' />} tooltip='Python'/>
+                <SkillIcon icon={<CppIcon size='80' className='text-[#233f70] group-hover:text-[#3c64a7]' />} tooltip='C++'/>
+                <SkillIcon icon={<GitIcon size='80' className='text-[#e44c30] group-hover:text-[#fb6f56]' />} tooltip='Git' />
+                <SkillIcon icon={<LinuxIcon size='80' className='text-[#ba8d07] group-hover:text-[#ffbf00]' />} tooltip='Linux' />
+                <SkillIcon icon={<BashIcon size='80' className='text-[#50b63c] group-hover:text-[#76da70]' />} tooltip='Bash'/>
+                <SkillIcon icon={<RTLDesignIcon size='80' className='text-[#3d976d] group-hover:text-[#6ddd83]' />} tooltip='RTL Design' />
+                <SkillIcon icon={<RoutingIcon size='80' className='text-[#a9903d] group-hover:text-[#cfbc7e]' />} tooltip='Analog Routing (Fusion Compiler)'/>
+                <SkillIcon icon={<JavaIcon size='80' className='text-[#d0350d] group-hover:text-[#ff3300]' />} tooltip='Java'/>
                 <SkillIcon icon={<HTMLIcon size='80' className='text-[#d74b24] group-hover:text-[#ff6034]' />} tooltip='HTML'/>
                 <SkillIcon icon={<CSSIcon size='80' className='text-[#2091eb] group-hover:text-[#4eafff]' />} tooltip='CSS'/>
                 <SkillIcon icon={<JSIcon size='80' className='text-[#e4d04b] group-hover:text-[#ebff39]' />} tooltip='JavaScript'/>
@@ -28,9 +41,6 @@ const Skills = () => {
                 <SkillIcon icon={<ReactIcon size='80' className='text-[#4fb7d3] group-hover:text-[#83e4ff]' />} tooltip='ReactJS'/>
                 <SkillIcon icon={<ReactRouterIcon size='80' className='text-[#c5021a] group-hover:text-[#e42138]' />} tooltip='React Router'/>
                 <SkillIcon icon={<TailwindIcon size='80' className='text-[#07adca] group-hover:text-[#53ccff]' />} tooltip='Tailwind CSS'/>
-                <SkillIcon icon={<CppIcon size='80' className='text-[#233f70] group-hover:text-[#3c64a7]' />} tooltip='C++'/>
-                <SkillIcon icon={<JavaIcon size='80' className='text-[#d0350d] group-hover:text-[#ff3300]' />} tooltip='Java'/>
-                <SkillIcon icon={<GitIcon size='80' className='text-[#e44c30] group-hover:text-[#fb6f56]' />} tooltip='Git' />
             </div>
         </div>
     )
