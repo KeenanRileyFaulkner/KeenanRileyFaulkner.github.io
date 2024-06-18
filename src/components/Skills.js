@@ -14,7 +14,8 @@ import {
     SiJava as JavaIcon,
     SiReactrouter as ReactRouterIcon,
     SiGit as GitIcon,
-    SiPython as PythonIcon
+    SiPython as PythonIcon,
+    SiSpring as SpringIcon
 } from 'react-icons/si';
 import { VscTerminalLinux as LinuxIcon  } from "react-icons/vsc";
 import useDocumentTitle from '../hooks/useDocumentTitle';
@@ -41,6 +42,7 @@ const Skills = () => {
                 <SkillIcon icon={<ReactIcon size='80' className='text-[#4fb7d3] group-hover:text-[#83e4ff]' />} tooltip='ReactJS'/>
                 <SkillIcon icon={<ReactRouterIcon size='80' className='text-[#c5021a] group-hover:text-[#e42138]' />} tooltip='React Router'/>
                 <SkillIcon icon={<TailwindIcon size='80' className='text-[#07adca] group-hover:text-[#53ccff]' />} tooltip='Tailwind CSS'/>
+                <SkillIcon icon={<SpringIcon size='80' className='text-[#568c31] group-hover:text-[#6aad3d]' />} tooltip='Spring Framework' />
             </div>
         </div>
     )
