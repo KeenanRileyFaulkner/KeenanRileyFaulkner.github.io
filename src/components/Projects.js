@@ -129,7 +129,7 @@ const Projects = () => {
                 projLink='https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=1420&context=studentpub'
                 vidSrc=''
                 description = 
-                    {'I co-authored a second paper a fuzzy sub-graph isomorphism approach to circuit analysis. This led to further research using Graph Neural Networks on the subject. I was in charge of writing a library to generate training data for our GNN models, and for quantifying performance using Precision, Recall, and F1 Scores. Click the title to read.'}
+                    {'I co-authored a paper on fuzzy sub-graph isomorphism approach to circuit analysis. This led to further research using Graph Neural Networks on the subject. I was in charge of writing a library to generate training data for our GNN models, and for quantifying performance using Precision, Recall, and F1 Scores. Click the title to read.'}
                 skillsIcons = {[
                     <SkillWithName 
                         icon={<GNNIcon size="30" className="hover:text-[#4575ff] text-gray-400 mr-4" />}  
