@@ -22,6 +22,7 @@ import {
     SiGithub as GithubIcon,
     SiGnubash as BashIcon,
     SiGit as GitIcon,
+    SiLinux as LinuxIcon,
 } from 'react-icons/si';
 import { TiFlowParallel as ParallelIcon } from "react-icons/ti";
 import ChipPic from "../images/chip.jpg";
@@ -52,6 +53,10 @@ const Projects = () => {
                     <SkillWithName
                         icon={<BashIcon size="30" className='hover:text-[#ff9900] text-gray-400 mr-4' />}
                         skillName='Scripting'
+                    />,
+                    <SkillWithName
+                        icon={<LinuxIcon size="30" className='hover:text-[#ffbf00] text-gray-400 mr-4' />}
+                        skillName='Linux/Unix'
                     />,
                 ]}
                 imgSrc={ FCPic }
