@@ -40,7 +40,7 @@ const Projects = () => {
                 projLink=''
                 vidSrc=''
                 description = 
-                    {'I completed an internship for the FCL team at Intel Corporation. Among more than 50 interns, I was one of only two selected to work on this team, due to strong programming skills. I worked on routing analog signals, and validating boundary pin placements using Synopsys Fusion Compiler.'}
+                    {'I completed an internship for the FCL team at Intel Corporation. I wrote a new Tcl-based tool to validate boundary pin placement in relation to power domains for Intel\'s newest generation of designs, and routed analog signals throughout the chip using Synopsys Fusion Compiler.'}
                 skillsIcons = {[
                     <SkillWithName 
                         icon={<RoutingIcon size="30" className="hover:text-[#cfbc7e] text-gray-400 mr-4" />} 
@@ -67,7 +67,7 @@ const Projects = () => {
                 projLink=''
                 vidSrc=''
                 description = 
-                    {'At Intel Corporation I lead development on a C++ GUI application widely used by Intel\'s Design Team to create floorplans and microbump layouts for advanced 3D chip designs. I personally added dozens of new Tcl commands to the built-in interpreter, made bug fixes and other enhancements, and integrated the program with GitHub for easier team-based development.'}
+                    {'I lead development on a C++ GUI application widely used by Intel\'s Design Team to create floorplans and microbump layouts for 3D chip designs. I added dozens of new Tcl commands to the program, made bug fixes, and integrated the program with GitHub for easier team-based development.'}
                 skillsIcons = {[
                     <SkillWithName 
                         icon={<CPPIcon size="30" className="hover:text-[#3c64a7] text-gray-400 mr-4" />} 
