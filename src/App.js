@@ -44,7 +44,7 @@ function App() {
   }
 
   return (
-    <div className='min-h-screen flex flex-col items-center'>
+    <div className='min-h-screen flex flex-col'>
       <div className='bg-[#0d1117] background bg-cover' />
       <Header />
       <Routes>

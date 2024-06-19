@@ -34,7 +34,7 @@ import useDocumentTitle from '../hooks/useDocumentTitle';
 const Projects = () => {
     useDocumentTitle('Projects -- Keenan Faulkner');
     return (
-        <div className="mt-[100px] pt-[20px] w-[75%] flex justify-center items-center min-h-[710px] flex-wrap">
+        <div className="mt-[100px] pt-[20px] w-[75%] flex justify-center items-center min-h-[710px] flex-wrap self-center">
             <ProjectCard 
                 projTitle='Full-Chip Layout'
                 projLink=''
