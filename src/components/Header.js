@@ -1,4 +1,4 @@
-import {RiStackFill as SkillsIcon, RiContactsBook2Fill as ContactIcon, RiMenuFill as HamburgerMenuIcon} from 'react-icons/ri'
+import {RiStackFill as SkillsIcon, RiMenuFill as HamburgerMenuIcon} from 'react-icons/ri'
 import {BsGrid as ProjectIcon} from 'react-icons/bs'
 import { IoClose as CloseIcon } from 'react-icons/io5'
 import { useState } from 'react'
@@ -17,9 +17,6 @@ const Header = () => {
                 </Link>
                 <Link to='/projects'>
                     <IconTooltip icon={<ProjectIcon/>} text="Projects" />
-                </Link>
-                <Link to='/contact'>
-                    <IconTooltip icon={<ContactIcon/>} text="Contact" />
                 </Link>
                 
                 <IconTooltip 
@@ -118,11 +115,6 @@ const MenuDropdown = ({ expanded, toggleExpanded }) => {
         navigate('/projects');
         toggleExpanded();
     }
-    
-    const navToContact = () => {
-        navigate('/contact');
-        toggleExpanded();
-    }
 
     const openInNewTab = url => {
         window.open(url, '_blank', 'noopener, noreferrer');
@@ -138,8 +130,6 @@ const MenuDropdown = ({ expanded, toggleExpanded }) => {
             <button className='dropdown-btn' onClick={navToSkills}>Skills -- 🔨</button>
             <hr className='dropdown-hr'/>
             <button className='dropdown-btn' onClick={navToProjects}>Projects -- 👷</button>
-            <hr className='dropdown-hr'/>
-            <button className='dropdown-btn' onClick={navToContact}>Contact -- 📨</button>
             <hr className='dropdown-hr'/>
             <button className='dropdown-btn' onClick={navToGithub}>Github Profile -- 🖥️</button>
         </div>
