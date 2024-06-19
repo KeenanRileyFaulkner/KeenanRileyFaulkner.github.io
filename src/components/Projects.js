@@ -40,7 +40,7 @@ const Projects = () => {
                 projLink=''
                 vidSrc=''
                 description = 
-                    {'I completed an internship for the FCL team at Intel Corporation. Among more than 50 interns, I was one of only two selected to work on this team, due to my programming skills. I worked on physical integration, routing analog signals, and designing health checks for boundary pin placements.'}
+                    {'I completed an internship for the FCL team at Intel Corporation. Among more than 50 interns, I was one of only two selected to work on this team, due to strong programming skills. I worked on routing analog signals, and validating boundary pin placements using Synopsys Fusion Compiler.'}
                 skillsIcons = {[
                     <SkillWithName 
                         icon={<RoutingIcon size="30" className="hover:text-[#cfbc7e] text-gray-400 mr-4" />} 
