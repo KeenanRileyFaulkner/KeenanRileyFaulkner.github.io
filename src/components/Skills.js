@@ -1,4 +1,7 @@
-import { FaRoute as RoutingIcon } from "react-icons/fa";
+import { 
+    FaRoute as RoutingIcon,
+    FaJava as JavaIcon,
+} from "react-icons/fa";
 import { IoHardwareChip as RTLDesignIcon } from "react-icons/io5";
 import {
     SiJavascript as JSIcon, 
@@ -11,13 +14,13 @@ import {
     SiTailwindcss as TailwindIcon,
     SiCplusplus as CppIcon,
     SiHtml5 as HTMLIcon,
-    SiJava as JavaIcon,
     SiReactrouter as ReactRouterIcon,
     SiGit as GitIcon,
     SiPython as PythonIcon,
     SiSpring as SpringIcon,
     SiGithub as GithubIcon,
 } from 'react-icons/si';
+import { BiCodeCurly as MustacheIcon } from "react-icons/bi";
 import { VscTerminalLinux as LinuxIcon  } from "react-icons/vsc";
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
@@ -35,6 +38,7 @@ const Skills = () => {
                 <SkillIcon icon={<RTLDesignIcon size='80' className='text-[#3d976d] group-hover:text-[#6ddd83]' />} tooltip='RTL Design' />
                 <SkillIcon icon={<RoutingIcon size='80' className='text-[#a9903d] group-hover:text-[#cfbc7e]' />} tooltip='Analog Routing (Synopsys Fusion Compiler)'/>
                 <SkillIcon icon={<JavaIcon size='80' className='text-[#d0350d] group-hover:text-[#ff3300]' />} tooltip='Java'/>
+                <SkillIcon icon={<MustacheIcon size='80' className='text-[#aa4400] group-hover:text-[#ffaa00]' />} tooltip='Mustache Templating Engine'/>
                 <SkillIcon icon={<ReactIcon size='80' className='text-[#4fb7d3] group-hover:text-[#83e4ff]' />} tooltip='ReactJS'/>
                 <SkillIcon icon={<HTMLIcon size='80' className='text-[#d74b24] group-hover:text-[#ff6034]' />} tooltip='HTML'/>
                 <SkillIcon icon={<CSSIcon size='80' className='text-[#2091eb] group-hover:text-[#4eafff]' />} tooltip='CSS'/>
