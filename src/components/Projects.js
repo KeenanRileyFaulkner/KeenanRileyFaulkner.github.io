@@ -67,7 +67,7 @@ const Projects = () => {
                 projLink=''
                 vidSrc=''
                 description = 
-                    {'I lead development on a C++ GUI application widely used by Intel\'s Design Team to create floorplans and microbump layouts for 3D chip designs. I added dozens of new Tcl commands to the program, made bug fixes, and integrated the program with GitHub for easier team-based development.'}
+                    {'I led development on a C++ GUI application widely used by Intel\'s Design Team to create floorplans and microbump layouts for 3D chip designs. I added dozens of new Tcl commands to the program, made bug fixes, and integrated the program with GitHub for easier team-based development.'}
                 skillsIcons = {[
                     <SkillWithName 
                         icon={<CPPIcon size="30" className="hover:text-[#3c64a7] text-gray-400 mr-4" />} 
@@ -98,7 +98,7 @@ const Projects = () => {
                 projLink='https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=8054&context=facpub'
                 vidSrc=''
                 description = 
-                    {'I co-authored a paper on validating FPGA bitstreams through structural comparison of a synthesized netlist to a bitstream-reversed netlist. My contributions included writing the fault-injection tests for the project and parallelizing our build system for comparison and validation. Click the title to read.'}
+                    {'I co-authored a paper on validating FPGA bitstreams through structural comparison of a synthesized netlist to a bitstream-reversed netlist. My contributions included writing the fault-injection tests for the project and parallelizing our build system for comparison and validation.'}
                 skillsIcons = {[
                     <SkillWithName 
                         icon={<PythonIcon size="30" className="hover:text-[#ff00ff] text-gray-400 mr-4" />} 
@@ -129,7 +129,7 @@ const Projects = () => {
                 projLink='https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=1420&context=studentpub'
                 vidSrc=''
                 description = 
-                    {'I co-authored a paper on fuzzy sub-graph isomorphism approach to circuit analysis. This led to further research using Graph Neural Networks on the subject. I was in charge of writing a library to generate training data for our GNN models, and for quantifying performance using Precision, Recall, and F1 Scores. Click the title to read.'}
+                    {'I co-authored a paper on fuzzy sub-graph isomorphism approach to circuit analysis. This led to further research using Graph Neural Networks on the subject. I was in charge of writing a library to generate training data for our GNN models, and for quantifying performance using Precision, Recall, and F1 Scores.'}
                 skillsIcons = {[
                     <SkillWithName 
                         icon={<GNNIcon size="30" className="hover:text-[#4575ff] text-gray-400 mr-4" />}  
@@ -156,7 +156,7 @@ const Projects = () => {
                 projLink='http://thekillersmusic.herokuapp.com'
                 vidSrc='https://www.youtube.com/embed/R2AtS6j5exM'
                 description = 
-                    {'I created this web app as my Capstone Project for DevMountain. It is a fan page for the Las Vegas band "The Killers" that allows me to feature information about the band, their music, and host my own covers of their music. It\'s my first fully self-contained project; no additional coding is required to maintain the site. I made an admin portal to make enhancing the website a self-sustaining process.'}
+                    {'I created this web app as my Capstone Project for DevMountain. It\'s a fan page for the Las Vegas band "The Killers" that allows me to feature information about the band, their music, and host my own covers of their music. It\'s a fully self-contained project; I made an admin portal so that no additional coding is required to maintain the site.'}
                 skillsIcons = {[
                     <SkillWithName 
                         icon={<ReactIcon size="30" className="hover:text-[#4fb7d3] text-gray-400 mr-4" />} 
@@ -190,7 +190,7 @@ const Projects = () => {
 }
 
 const ProjectCard = ({ projTitle, projLink, vidSrc, description, skillsIcons, imgSrc, altTxt }) => {
-    const graphic = imgSrc && altTxt ? <PhotoFrame photoSrc={imgSrc} altTxt={altTxt} /> : <DemoVideo vidSrc={vidSrc} />
+    const graphic = imgSrc && altTxt ? <PhotoFrame photoSrc={imgSrc} altTxt={altTxt} projLink={projLink} /> : <DemoVideo vidSrc={vidSrc} />
     const header = projLink === '' ? 
         (<h1 className="text-[#c1c9d9] hover:cursor-default font-bold text-[20pt] text-center">
             {projTitle}
@@ -206,20 +206,24 @@ const ProjectCard = ({ projTitle, projLink, vidSrc, description, skillsIcons, im
             {header}
             <hr className="w-[95%] h-[1px] text-white my-5" />
             {graphic}
-            <ProjDescription description={description}/>
+            <ProjDescription description={description} projLink={projLink}/>
             <SkillsContainer skillsIcons={skillsIcons}/>
         </div>
     )
 }
 
-const PhotoFrame = ({ photoSrc, altTxt }) => {
+const PhotoFrame = ({ photoSrc, altTxt, projLink }) => {
     return (
-        <img
-            width="300" 
-            height="169" 
-            src={photoSrc}
-            alt={altTxt} />
-    )
+        <div className="project-image">
+          {projLink !== '' ? (
+            <a href={projLink} target="_blank" rel="noopener noreferrer">
+              <img width="300" height="169" src={photoSrc} alt={altTxt} className="project-img" />
+            </a>
+          ) : (
+            <img width="300" height="169" src={photoSrc} alt={altTxt} className="project-img" />
+          )}
+        </div>
+    );
 }
 
 const DemoVideo = ({ vidSrc }) => {
@@ -235,10 +239,13 @@ const DemoVideo = ({ vidSrc }) => {
     )
 }
 
-const ProjDescription = ({description}) => {
+const ProjDescription = ({description, projLink}) => {
     return (
         <p className="text-[#c1c9d9] text-[12pt] px-1 mt-5">
             {description}
+            {projLink !== '' && 
+                (<> Click <a href={projLink} target="_blank" rel="noopener noreferrer" className="hover:text-white">HERE</a> to view. </>)
+            }
         </p>
     )
 }
